@@ -12,16 +12,28 @@ const { name, specialty, summary, email } = Astro.props;
     {name}
   </h1>
   <p
-    class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
-  >
-    {specialty}
-  </p>
+    class="mb-16 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
+    set:html={specialty}
+  ></p>
   <p class="mb-16 text-base font-normal text-neutral md:text-lg">
     {summary}
   </p>
 
-  <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Get in Touch</a
-  >
+  <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
+    <button
+      class="inline-block min-w-[180px] text-center rounded-full bg-blue-600 px-8 py-5 text-sm leading-5 font-medium text-white transition-all duration-300 shadow-md hover:bg-blue-700 focus:bg-blue-700 -translate-y-0 hover:-translate-y-1 focus:-translate-y-1 shadow-md hover:shadow-xl focus:shadow-xl"
+      onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });"
+      type="button"
+    >
+      Know More
+    </button>
+    <a
+      class="inline-block min-w-[180px] text-center rounded-full bg-blue-600 px-8 py-5 text-sm leading-5 font-medium text-white transition-all duration-300 shadow-md hover:bg-blue-700 focus:bg-blue-700 -translate-y-0 hover:-translate-y-1 focus:-translate-y-1 shadow-md hover:shadow-xl focus:shadow-xl"
+      href="/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Download CV
+    </a>
+  </div>
 </section>

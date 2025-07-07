@@ -3,8 +3,8 @@ import { SITE_CONTENT } from "@config";
 import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
-import Projects from "@components/Projects.astro";
 import About from "@components/About.astro";
+import Section from "@components/Section.astro";
 
 import "../styles/global.css";
 ---
@@ -12,6 +12,25 @@ import "../styles/global.css";
 <Layout>
   <Hero {...SITE_CONTENT.hero} />
   <Experience experience={SITE_CONTENT.experience} />
-  <Projects projects={SITE_CONTENT.projects} />
   <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+  <Section text="Contact Me" href="contact">
+    <p class="text-lg text-neutral mb-4">Would you like to work with me? Awesome!</p>
+    <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center mt-4">
+      <a
+        class="inline-block min-w-[180px] text-center rounded-full bg-blue-600 px-8 py-5 text-sm leading-5 font-medium text-white transition-all duration-300 shadow-md hover:bg-blue-700 focus:bg-blue-700 -translate-y-0 hover:-translate-y-1 focus:-translate-y-1 shadow-md hover:shadow-xl focus:shadow-xl"
+        href="mailto:bugrasitemkar@gmail.com"
+      >
+        Get in Touch
+      </a>
+      <a
+        class="inline-block min-w-[180px] text-center rounded-full bg-blue-600 px-8 py-5 text-sm leading-5 font-medium text-white transition-all duration-300 shadow-md hover:bg-blue-700 focus:bg-blue-700 -translate-y-0 hover:-translate-y-1 focus:-translate-y-1 shadow-md hover:shadow-xl focus:shadow-xl"
+        href="https://huggingface.co/spaces/bugrasitemkar/Chat_with_Bugra"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Chat with me
+      </a>
+    </div>
+    <!-- Contact form or info can go here -->
+  </Section>
 </Layout>

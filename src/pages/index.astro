@@ -3,6 +3,8 @@ import { SITE_CONTENT } from "@config";
 import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
+import Projects from "@components/Projects.astro";
+import Education from "@components/Education.astro";
 import About from "@components/About.astro";
 import Section from "@components/Section.astro";
 
@@ -12,25 +14,28 @@ import "../styles/global.css";
 <Layout>
   <Hero {...SITE_CONTENT.hero} />
   <Experience experience={SITE_CONTENT.experience} />
+  <Projects projects={SITE_CONTENT.projects} />
+  <Education education={SITE_CONTENT.education} />
   <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
   <Section text="Contact Me" href="contact">
-    <p class="text-lg text-neutral mb-4">Would you like to work with me? Awesome!</p>
-    <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center mt-4">
+    <p class="text-lg text-neutral mb-8">Would you like to work with me? Awesome!</p>
+    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
       <a
-        class="inline-block min-w-[180px] text-center rounded-full bg-blue-600 px-8 py-5 text-sm leading-5 font-medium text-white transition-all duration-300 shadow-md hover:bg-blue-700 focus:bg-blue-700 -translate-y-0 hover:-translate-y-1 focus:-translate-y-1 shadow-md hover:shadow-xl focus:shadow-xl"
+        class="group relative inline-flex min-w-[200px] items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_24px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
         href="mailto:bugrasitemkar@gmail.com"
       >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         Get in Touch
       </a>
       <a
-        class="inline-block min-w-[180px] text-center rounded-full bg-blue-600 px-8 py-5 text-sm leading-5 font-medium text-white transition-all duration-300 shadow-md hover:bg-blue-700 focus:bg-blue-700 -translate-y-0 hover:-translate-y-1 focus:-translate-y-1 shadow-md hover:shadow-xl focus:shadow-xl"
-        href="https://huggingface.co/spaces/bugrasitemkar/Chat_with_Bugra"
+        class="group relative inline-flex min-w-[200px] items-center justify-center gap-2 rounded-full border border-primary/60 bg-transparent px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_24px_rgba(37,99,235,0.2)] hover:-translate-y-0.5"
+        href="https://drive.google.com/file/d/1R05JOmihRptE7Lzj3tLgk7DSuJuKtcqo/view"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Chat with me
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Download CV
       </a>
     </div>
-    <!-- Contact form or info can go here -->
   </Section>
 </Layout>

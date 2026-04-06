@@ -13,7 +13,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Education", href: "#education" },
     { text: "About", href: "#about" },
     { text: "Contact Me", href: "#contact" },
-    { text: "Download CV", href: "https://drive.google.com/file/d/1R05JOmihRptE7Lzj3tLgk7DSuJuKtcqo/view" },
+    { text: "Download CV", href: "https://drive.google.com/file/d/1acUK251gt24FSpqXgQznsviUYbWlLJnh/view?usp=sharing" },
   ],
   socialLinks: [
     { text: "Github", href: "https://github.com/bugrasitemkar" },

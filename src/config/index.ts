@@ -139,6 +139,12 @@ export const SITE_CONTENT: SiteContent = {
       image: "/ai-signals.jpg",
     },
     {
+      name: "AI Red Team Workbench",
+      summary: "A local-first AI security research tool that stress-tests LLM defenses with 22 attack techniques across 7 categories, multi-turn attack chains, automated red teaming, and real-time security analysis with six specialized detectors. Built with React, FastAPI, Ollama, and Docker.",
+      linkSource: "https://github.com/bugrasitemkar/ai-security-lab",
+      image: "/ai-security-lab.jpg",
+    },
+    {
       name: "Handoff",
       summary: "A minimalist desktop application built around a daily practice of writing a brief note each evening for your next morning self. Emphasizes intention-setting and reflection through a constraint-based interface. Built with Tauri v2, React, and Rust.",
       linkSource: "https://github.com/bugrasitemkar/handoff-",
